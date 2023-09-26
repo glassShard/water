@@ -104,5 +104,7 @@
       }
     }
   },
-  "defaultProject": "watering"
+  "cli": {
+    "analytics": "17e074ec-0103-4c2c-94b0-6c9e88281b84"
+  }
 }
