@@ -1,0 +1,128 @@
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  color: #666;
+  font-family: sans-serif;
+}
+
+.circular-chart {
+  padding: 10px;
+  display: block;
+  margin: 10px auto;
+  max-width: 50%;
+  max-height: 250px;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.round-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.soil1 {
+  stroke: #81d501;
+}
+
+.soil2 {
+  stroke: #02bafd;
+}
+
+.soil3 {
+  stroke: #f401fc;
+}
+
+.soil4 {
+  stroke: #fc8701;
+}
+
+.danger {
+  stroke: red;
+}
+
+.bg-danger {
+  stroke: #fca3a3;
+}
+
+.bg-normal {
+  stroke: #eee;
+}
+
+.circle-bg,
+.bg-danger {
+  fill: none;
+  stroke-width: 3.8;
+}
+
+.percentage {
+  fill: #666;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+
+.danger-text {
+  fill: #666;
+  font-size: 0.35em;
+  text-anchor: middle;
+}
+
+.small {
+  font-size: 0.7em;
+}
+
+.title {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 2em;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+.chart {
+  width: 100%;
+  align-self: stretch;
+}
+
+.chart-wrapper {
+  width: 100%;
+  height: 90%;
+}
+
+.my-btn {
+  background-color: #66a801;
+}
+
+.top-right {
+  position: absolute;
+  margin: 6px;
+  top: 0;
+  right: 0;
+}
+
+.my-btn:hover {
+  background-color: #4a7a01;
+}
+
+.screen {
+  min-height: 100vh;
+}
+

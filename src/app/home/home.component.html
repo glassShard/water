@@ -1,0 +1,38 @@
+<div class="title">
+  <h1>Water level by sensor</h1>
+  <h2 *ngIf="data">{{ data!.date }}</h2>
+  <a routerLink="/chart" class="btn btn-lg btn-success my-btn m-1">Chart</a>
+</div>
+<div class="round-wrapper" *ngIf="data">
+  <svg viewBox="0 0 36 36" class="circular-chart" *ngFor="let soil of data.soils">
+    <path class="circle-bg"
+          [ngClass]="{'bg-normal': soil.soilValue <= 100, 'bg-danger': soil.soilValue === 999}"
+          d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+    />
+    <path class="circle"
+          [ngClass]="{'soil1': soil.soilValue <= 100 && soil.name === 'soil1',
+            'soil2': soil.soilValue <= 100 && soil.name === 'soil2',
+            'soil3': soil.soilValue <= 100 && soil.name === 'soil3',
+            'soil4': soil.soilValue <= 100 && soil.name === 'soil4',
+            'danger': soil.soilValue === 999}"
+          attr.stroke-dasharray="{{ soil.soilValue }}, 100"
+          d="M18 2.0845
+      a 15.9155 15.9155 0 0 1 0 31.831
+      a 15.9155 15.9155 0 0 1 0 -31.831"
+    />
+    <text x="18" y="20.35" class="percentage" *ngIf="soil.soilValue <= 100">
+      <tspan x="18" y="14" class="small">{{ soil.name | titlecase }}</tspan>
+      <tspan x="18" dy="1.3em">{{ soil.soilValue }}%</tspan>
+    </text>
+    <text x="18" y="20.35" class="danger-text" *ngIf="soil.soilValue === 999">
+      <tspan x="18" y="14">No Data</tspan>
+      <tspan x="18" dy="1.2em">From</tspan>
+      <tspan x="18" dy="1.2em">{{ soil.name | titlecase }}</tspan>
+    </text>
+  </svg>
+</div>
+
+
+
