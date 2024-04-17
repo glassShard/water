@@ -6,12 +6,16 @@ import { HomeComponent } from './home/home.component';
 import { ChartComponent } from './chart/chart.component';
 import { HttpClientModule } from "@angular/common/http";
 import { NgxEchartsModule } from "ngx-echarts";
+import { LoginComponent } from './login/login.component';
+import { StartWaterComponent } from './start-water/start-water.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ChartComponent
+    ChartComponent,
+    LoginComponent,
+    StartWaterComponent
   ],
   imports: [
     BrowserModule,
