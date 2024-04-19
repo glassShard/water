@@ -6,6 +6,10 @@ body {
   font-family: sans-serif;
 }
 
+.page {
+  min-height: 100vh;
+}
+
 .circular-chart {
   padding: 10px;
   display: block;

@@ -1,0 +1,14 @@
+<div class="page">
+  <div class="title">
+    <h1>Start Water</h1>
+  </div>
+  <div class="d-flex flex column justify-content-center align-items-center" *ngFor="let relay of relays; let i = index">
+    <p class="m-1" *ngIf="data">Last 24 hour: {{ data['relay' + (i + 1).toString()] }}</p>
+    <div class="d-flex flex-row justify-content-center align-items-center">
+
+      <button class="btn btn-lg btn-success m-1" (click)="onBtn('ON', relay)">Relay {{ relay }} Start</button>
+      <button class="btn btn-lg btn-danger m-1" (click)="onBtn('OFF', relay)">Relay {{ relay }} Stop</button>
+    </div>
+
+  </div>
+</div>
